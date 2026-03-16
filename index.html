@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sahid Ansari — AI/ML Developer & B.Tech CSE Student at Brainware University, Kolkata." />
+  <meta name="theme-color" content="#6366f1" />
+  <title>Sahid Ansari — AI/ML Developer</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <header class="site-header" id="site-header" role="banner">
+    <nav class="container nav-wrapper" aria-label="Main navigation">
+      <a href="#home" class="logo-link" aria-label="Sahid Ansari — Home">
+        <span class="logo-name">Sahid Ansari</span>
+        <span class="logo-role">AI/ML Developer</span>
+      </a>
+
+      <ul class="nav-list" role="list" id="nav-list">
+        <li><a href="#home"      class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"     class="nav-link" data-section="about">About</a></li>
+        <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+        <li><a href="#contact"   class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+  <section id="home" class="hero-section" aria-labelledby="hero-title">
+    <!-- Decorative background orbs (aria-hidden) -->
+    <div class="hero-orb hero-orb--primary" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--secondary" aria-hidden="true"></div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-badge" role="note">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+          <span>AI / ML Enthusiast</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-greeting">Hello, I'm</span>
+          <span class="hero-name" id="typewriter-target" aria-label="Sahid Ansari">Sahid Ansari</span>
+        </h1>
+
+        <p class="hero-desc">
+          Passionate about AI, ML, and Full Stack Development.<br>
+          <strong class="hero-highlight">Always learning, always building.</strong>
+        </p>
+
+        <div class="hero-stats" role="list" aria-label="Key stats">
+          <div class="stat" role="listitem">
+            <span class="stat-value" data-count-to="2024" aria-label="Started journey 2024">2024</span>
+            <span class="stat-label">Started Journey</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-value" aria-label="3+ Projects">3+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-value" aria-label="B.Tech degree">B.Tech</span>
+            <span class="stat-label">CSE (AI/ML)</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn--primary" id="cv-download-btn" aria-label="Download Sahid Ansari's CV">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Download CV</span>
+          </button>
+          <a href="#about" class="btn btn--ghost" aria-label="Learn more about Sahid">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="profile-ring">
+          <div class="profile-ring__track"></div>
+          <div class="profile-img-wrap">
+            <img src="assets/profile.png" alt="Sahid Ansari" class="profile-img" width="320" height="320" loading="eager" />
+          </div>
+          <div class="profile-glow"></div>
+        </div>
+
+        <div class="float-badges">
+          <div class="float-badge" style="--delay:0s;   --tx:-120px; --ty:-80px;"  data-label="AI">🤖</div>
+          <div class="float-badge" style="--delay:1.5s; --tx:110px;  --ty:-60px;"  data-label="ML">🧠</div>
+          <div class="float-badge" style="--delay:3s;   --tx:-130px; --ty:70px;"   data-label="Code">💻</div>
+          <div class="float-badge" style="--delay:4.5s; --tx:100px;  --ty:90px;"   data-label="Data">📊</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+      <span class="scroll-hint__dot"></span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+  <section id="about" class="about-section reveal-section" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title" id="about-title">Get to know me better</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Text side -->
+        <div class="about-body reveal-item">
+          <h3 class="about-name">
+            Hi! I'm <span class="text-gradient">Sahid Ansari</span>
+          </h3>
+          <p class="about-para">
+            A dedicated Computer Science student specializing in
+            <strong>Artificial Intelligence and Machine Learning</strong> at
+            Brainware University, Kolkata. My journey in technology is driven
+            by curiosity and passion for innovation.
+          </p>
+          <p class="about-para">
+            I enjoy exploring emerging technologies, creating impactful web
+            applications, and solving challenging problems that make a
+            difference. My goal is to leverage AI/ML to build solutions that
+            benefit society.
+          </p>
+
+          <ul class="info-list" role="list" aria-label="Personal information">
+            <li class="info-item">
+              <span class="info-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+              <div class="info-body">
+                <strong>Education</strong>
+                <span>B.Tech CSE (AI &amp; ML) — Brainware University</span>
+              </div>
+            </li>
+            <li class="info-item">
+              <span class="info-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+              <div class="info-body">
+                <strong>Location</strong>
+                <span>Kolkata, India</span>
+              </div>
+            </li>
+            <li class="info-item">
+              <span class="info-icon" aria-hidden="true"><i class="fas fa-heart"></i></span>
+              <div class="info-body">
+                <strong>Passion</strong>
+                <span>AI/ML &amp; Full Stack Development</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card side -->
+        <div class="about-card reveal-item">
+          <div class="profile-card">
+            <div class="profile-card__img-wrap">
+              <img src="assets/profile.png" alt="Sahid Ansari professional photo" class="profile-card__img" width="340" height="380" loading="lazy" />
+              <div class="profile-card__overlay" aria-hidden="true"></div>
+            </div>
+            <div class="profile-card__body">
+              <p class="profile-card__name">Sahid Ansari</p>
+              <p class="profile-card__role">B.Tech CSE (AI/ML) Student</p>
+              <div class="profile-card__tags">
+                <span class="tag">AI Enthusiast</span>
+                <span class="tag">Problem Solver</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PORTFOLIO ═══════════════════════════ -->
+  <section id="portfolio" class="portfolio-section reveal-section" aria-labelledby="portfolio-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title" id="portfolio-title">My Work &amp; Achievements</h2>
+      </div>
+
+      <!-- Tab buttons -->
+      <div class="tab-bar" role="tablist" aria-label="Portfolio tabs">
+        <button class="tab-btn active" role="tab" data-tab="projects"     aria-selected="true"  aria-controls="tab-projects">
+          <i class="fas fa-folder-open" aria-hidden="true"></i> Projects
+        </button>
+        <button class="tab-btn"        role="tab" data-tab="certificates" aria-selected="false" aria-controls="tab-certificates">
+          <i class="fas fa-certificate" aria-hidden="true"></i> Certificates
+        </button>
+        <button class="tab-btn"        role="tab" data-tab="skills"       aria-selected="false" aria-controls="tab-skills">
+          <i class="fas fa-code" aria-hidden="true"></i> Skills
+        </button>
+      </div>
+
+      <!-- ── Projects ── -->
+      <div id="tab-projects" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-projects">
+        <div class="projects-grid">
+
+          <!-- AI Virtual Assistant -->
+          <article class="project-card reveal-item">
+            <div class="project-card__header">
+              <div class="project-icon" aria-hidden="true">
+                <i class="fas fa-robot"></i>
+              </div>
+              <span class="status-pill status--progress">In Progress</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-title">AI Virtual Assistant</h3>
+              <p class="project-desc">An intelligent virtual assistant powered by AI and machine learning, capable of natural language processing and task automation.</p>
+              <ul class="tech-stack" aria-label="Technologies used" role="list">
+                <li class="tech-chip">Python</li>
+                <li class="tech-chip">NLP</li>
+                <li class="tech-chip">Machine Learning</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <button class="btn btn--sm btn--muted" disabled aria-label="Coming soon">
+                <i class="fas fa-clock" aria-hidden="true"></i> Coming Soon
+              </button>
+            </div>
+          </article>
+
+          <!-- Smart Attendance System -->
+          <article class="project-card reveal-item">
+            <div class="project-card__header">
+              <div class="project-icon" aria-hidden="true">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <span class="status-pill status--progress">In Progress</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-title">Smart Attendance System</h3>
+              <p class="project-desc">A face-recognition based attendance system using OpenCV and Flask, storing encodings in SQLite for scalable real-time tracking.</p>
+              <ul class="tech-stack" aria-label="Technologies used" role="list">
+                <li class="tech-chip">Python</li>
+                <li class="tech-chip">Flask</li>
+                <li class="tech-chip">OpenCV</li>
+                <li class="tech-chip">SQLite</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <button class="btn btn--sm btn--muted" disabled aria-label="Coming soon">
+                <i class="fas fa-clock" aria-hidden="true"></i> Coming Soon
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── Certificates ── -->
+      <div id="tab-certificates" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-certificates" hidden>
+        <div class="certificates-grid">
+
+          <!-- Be10x Certificate -->
+          <article class="cert-card cert--earned reveal-item"
+                   role="button" tabindex="0"
+                   aria-label="View AI Tools Workshop certificate by Be10x"
+                   data-cert-id="be10x-certificate">
+            <div class="cert-icon" aria-hidden="true"><i class="fas fa-award"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">AI Tools Workshop</h3>
+              <p class="cert-issuer">Be10x</p>
+              <p class="cert-desc">Successfully completed comprehensive workshop on ChatGPT and AI Tools for enhanced productivity.</p>
+              <div class="cert-meta">
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                <time datetime="2025">2025</time>
+              </div>
+            </div>
+            <button class="btn btn--sm btn--green cert-view-btn" aria-label="View Be10x certificate">
+              <i class="fas fa-eye" aria-hidden="true"></i> View Certificate
+            </button>
+          </article>
+
+          <!-- FreeCodeCamp Certificate -->
+          <article class="cert-card cert--ongoing reveal-item">
+            <div class="cert-icon" aria-hidden="true"><i class="fab fa-html5"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">Web Development</h3>
+              <p class="cert-issuer">FreeCodeCamp</p>
+              <p class="cert-desc">HTML, CSS, JavaScript fundamentals with hands-on projects.</p>
+              <div class="cert-meta">
+                <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                <span>Ongoing</span>
+              </div>
+            </div>
+            <span class="status-pill status--ongoing">Ongoing</span>
+          </article>
+
+          <!-- ML Certification -->
+          <article class="cert-card cert--upcoming reveal-item">
+            <div class="cert-icon" aria-hidden="true"><i class="fas fa-hourglass-half"></i></div>
+            <div class="cert-body">
+              <h3 class="cert-title">Machine Learning Certification</h3>
+              <p class="cert-issuer">Upcoming</p>
+              <p class="cert-desc">Advanced machine learning concepts and practical applications.</p>
+            </div>
+            <span class="status-pill status--planned">Planned</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── Skills ── -->
+      <div id="tab-skills" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-skills" hidden>
+        <!-- Rendered by main.js from SKILLS data array -->
+        <div class="skills-grid" id="skills-grid" aria-label="Technical skills" role="list"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Certificate Modal ── -->
+  <div id="cert-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__box">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-title">Certificate</h2>
+        <button class="modal__close" id="modal-close" aria-label="Close certificate modal">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__img-wrap" id="modal-img-wrap">
+          <img id="certificate-image" src="" alt="Certificate" class="modal__img" />
+          <div class="modal__zoom-controls">
+            <button class="zoom-btn" id="zoom-in"    aria-label="Zoom in"><i class="fas fa-search-plus"></i></button>
+            <button class="zoom-btn" id="zoom-reset" aria-label="Reset zoom"><i class="fas fa-compress-arrows-alt"></i></button>
+            <button class="zoom-btn" id="zoom-out"   aria-label="Zoom out"><i class="fas fa-search-minus"></i></button>
+          </div>
+        </div>
+        <div class="modal__actions">
+          <button class="btn btn--primary" id="cert-download-btn">
+            <i class="fas fa-download" aria-hidden="true"></i> Download
+          </button>
+          <button class="btn btn--ghost" id="cert-share-btn">
+            <i class="fas fa-share-alt" aria-hidden="true"></i> Share
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ CONTACT ══════════════════════════════ -->
+  <section id="contact" class="contact-section reveal-section" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title" id="contact-title">Let's Connect &amp; Build Something Amazing</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info card -->
+        <div class="contact-info-card reveal-item">
+          <h3 class="contact-card-title">Ready to collaborate?</h3>
+          <p class="contact-card-sub">I'm always open to discussing new opportunities, innovative projects, and interesting conversations about technology.</p>
+
+          <ul class="contact-details" role="list" aria-label="Contact information">
+            <li class="contact-item">
+              <span class="contact-icon-wrap" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:sahidansari2906@gmail.com" class="contact-value">sahidansari2906@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon-wrap" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+              <div>
+                <strong>Location</strong>
+                <span class="contact-value">Kolkata, India</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="social-section">
+            <h4 class="social-heading">Connect with me</h4>
+            <div class="social-list">
+              <a href="https://www.linkedin.com/in/sahidansari19" target="_blank" rel="noopener noreferrer" class="social-card social-card--linkedin" aria-label="LinkedIn profile of Sahid Ansari">
+                <span class="social-card__icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+                <div class="social-card__text">
+                  <span class="social-card__name">LinkedIn</span>
+                  <span class="social-card__handle">@sahidansari19</span>
+                </div>
+                <i class="fas fa-arrow-right social-card__arrow" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/sahidansari" target="_blank" rel="noopener noreferrer" class="social-card social-card--github" aria-label="GitHub profile of Sahid Ansari">
+                <span class="social-card__icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+                <div class="social-card__text">
+                  <span class="social-card__name">GitHub</span>
+                  <span class="social-card__handle">@sahidansari</span>
+                </div>
+                <i class="fas fa-arrow-right social-card__arrow" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-wrap reveal-item">
+          <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+            <h3 class="form-title">Send me a message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Your Name</label>
+                <input type="text"  id="f-name"    name="name"    placeholder="John Doe"          autocomplete="name"  required />
+              </div>
+              <div class="form-group">
+                <label for="f-email">Your Email</label>
+                <input type="email" id="f-email"   name="email"   placeholder="john@example.com"  autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-subject">Subject</label>
+              <input type="text" id="f-subject" name="subject" placeholder="How can I help you?" required />
+            </div>
+
+            <div class="form-group">
+              <label for="f-message">Your Message</label>
+              <textarea id="f-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="form-submit">
+              <span class="btn__label">Send Message</span>
+              <i class="fas fa-paper-plane btn__icon" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="footer-year">2025</span> Sahid Ansari. Crafted with passion &amp; dedication.</p>
+      <a href="#home" class="footer-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i> Back to top
+      </a>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+  <script src="js/certificate.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

@@ -50,7 +50,7 @@ const SKILLS = [
   { name: 'Scikit-Learn',  sub: 'ML Algorithms',              icon: 'scikitlearn/scikitlearn-original.svg', glow: '247,137,26'  },
   { name: 'OpenCV',        sub: 'Computer Vision',            icon: 'opencv/opencv-original.svg',           glow: '94,182,228'  },
 
-  // ── AI / ML Domains — SimpleIcons CDN (correct brand icons) ──────────
+  // ── AI / ML Domains — working SimpleIcons ────────────────────────────
   { name: 'Machine Learning', sub: 'Supervised & Unsupervised',
     url: 'https://cdn.simpleicons.org/scikitlearn/F7931E',    glow: '247,147,30'  },
 
@@ -60,24 +60,37 @@ const SKILLS = [
   { name: 'NLP',           sub: 'Text & Language AI',
     url: 'https://cdn.simpleicons.org/huggingface/FFD21E',    glow: '255,210,30'  },
 
-  { name: 'Generative AI', sub: 'LLMs & Diffusion Models',
-    url: 'https://cdn.simpleicons.org/openai/000000',         glow: '99,102,241'  },
-
   { name: 'MLOps',         sub: 'Model Deployment & CI/CD',
     url: 'https://cdn.simpleicons.org/mlflow/0194E2',         glow: '1,148,226'   },
 
-  // ── Data & Analytics Tools ───────────────────────────────────────────
+  // ── Inline SVG — CDN-independent, always loads ───────────────────────
+  {
+    name: 'Generative AI', sub: 'LLMs & Diffusion Models',
+    url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='3' fill='%236366f1'/%3E%3Cpath fill='none' stroke='%236366f1' stroke-width='1.5' d='M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2'/%3E%3Cpath fill='none' stroke='%236366f1' stroke-width='1.2' d='M12 2c2.5 2.5 4 5.6 4 10s-1.5 7.5-4 10M12 2C9.5 4.5 8 7.6 8 12s1.5 7.5 4 10M2 12h20'/%3E%3C/svg%3E",
+    glow: '99,102,241'
+  },
+
+  {
+    name: 'Power BI',      sub: 'Business Intelligence',
+    url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='1' y='14' width='4' height='8' rx='1' fill='%23F2C811'/%3E%3Crect x='7' y='9' width='4' height='13' rx='1' fill='%23F2C811'/%3E%3Crect x='13' y='4' width='4' height='18' rx='1' fill='%23F2C811'/%3E%3Crect x='19' y='7' width='4' height='15' rx='1' fill='%23F2C811' opacity='.7'/%3E%3C/svg%3E",
+    glow: '242,200,17'
+  },
+
+  {
+    name: 'Excel',         sub: 'Spreadsheet & Analysis',
+    url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='3' fill='%23217346'/%3E%3Cpath fill='white' d='M7 7h2.8l2.2 3.5L14.2 7H17l-3.6 5 3.8 5h-2.9L12 13.4 9.7 17H7l3.7-5z'/%3E%3C/svg%3E",
+    glow: '33,115,70'
+  },
+
+  {
+    name: 'Data Analytics', sub: 'Insights & Reporting',
+    url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23E97627' d='M3 3v18h18v-2H5V3zm14.3 2.3-5.8 5.8-2.8-2.8L4 13l1.4 1.4 3.3-3.3 2.8 2.8 7.2-7.2z'/%3E%3C/svg%3E",
+    glow: '233,118,39'
+  },
+
+  // ── Data Science ─────────────────────────────────────────────────────
   { name: 'Data Science',  sub: 'End-to-End Pipelines',
     url: 'https://cdn.simpleicons.org/kaggle/20BEFF',         glow: '32,190,255'  },
-
-  { name: 'Data Analytics',sub: 'Insights & Reporting',
-    url: 'https://cdn.simpleicons.org/tableau/E97627',        glow: '233,118,39'  },
-
-  { name: 'Power BI',      sub: 'Business Intelligence',
-    url: 'https://cdn.simpleicons.org/powerbi/F2C811',        glow: '242,200,17'  },
-
-  { name: 'Excel',         sub: 'Spreadsheet & Analysis',
-    url: 'https://cdn.simpleicons.org/microsoftexcel/217346', glow: '33,115,70'   },
 
   // ── Tools & DevOps ───────────────────────────────────────────────────
   { name: 'Git',           sub: 'Version Control',            icon: 'git/git-original.svg',                 glow: '240,80,50'   },
@@ -296,8 +309,8 @@ class PortfolioManager {
     const grid = document.getElementById('skills-grid');
     if (!grid) return;
 
-    /* DSA: Map for O(1) icon-src — skill.url (SimpleIcons CDN) takes priority
-       over DevIcons path, so brand-specific icons always render correctly.  */
+    /* DSA: Map<name, src> — skill.url (inline SVG / SimpleIcons) takes
+       priority over DevIcons path, ensuring brand-correct icons always show. */
     const iconMap = new Map(SKILLS.map(s => [s.name, s.url || `${DEVICONS_BASE}${s.icon}`]));
 
     const fragment = document.createDocumentFragment();   // batch DOM insert — 1 reflow
@@ -308,13 +321,20 @@ class PortfolioManager {
       item.setAttribute('role', 'listitem');
       item.setAttribute('aria-label', skill.name);
 
+      const src = iconMap.get(skill.name);
       item.innerHTML = `
         <img
-          src="${iconMap.get(skill.name)}"
+          src="${src}"
           alt="${skill.name} icon"
           width="72" height="72"
           loading="lazy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
         />
+        <span class="skill-icon-fallback" aria-hidden="true"
+          style="display:none;width:72px;height:72px;align-items:center;justify-content:center;
+                 font-size:2rem;border-radius:12px;background:rgba(99,102,241,.1);color:#6366f1">
+          ⚡
+        </span>
         <span class="skill-name">${skill.name}</span>
         <span class="skill-sub">${skill.sub}</span>
       `;

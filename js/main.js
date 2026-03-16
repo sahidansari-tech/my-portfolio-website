@@ -420,23 +420,26 @@ class PortfolioManager {
     if (panel) { panel.classList.add('active'); panel.removeAttribute('hidden'); }
     if (btn)   { btn.classList.add('active');   btn.setAttribute('aria-selected', 'true'); }
 
-    /* Staggered card animation */
+    /* ── Reveal cards in the newly-active panel ──────────────────────────
+       Fix: add .visible class directly (reliable) with CSS transition stagger.
+       Old rAF+setTimeout inline-style approach had race conditions.         */
     if (panel) {
-      const cards = panel.querySelectorAll('.project-card, .cert-card, .skill-item');
-      cards.forEach((card, i) => {
-        card.style.opacity  = '0';
-        card.style.transform = 'translateY(20px)';
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            card.style.transition = 'opacity .5s ease, transform .5s ease';
-            card.style.opacity    = '1';
-            card.style.transform  = 'translateY(0)';
-          }, i * 80);
+      requestAnimationFrame(() => {
+        panel.querySelectorAll('.reveal-item').forEach((el, i) => {
+          el.style.opacity        = '';   // clear any leftover inline styles
+          el.style.transform      = '';
+          el.style.transition     = '';
+          el.style.transitionDelay = i * 0.07 + 's';   // stagger
+
+          el.classList.add('visible');          // CSS: opacity 0→1
+          this._revealed.set(el, true);         // WeakMap: mark done
+
+          if (this._observed.has(el)) {
+            this._revealObserver.unobserve(el);
+            this._observed.delete(el);          // clean Set
+          }
         });
       });
-
-      /* Register new items with observer */
-      panel.querySelectorAll('.reveal-item').forEach(el => this._observe(el));
     }
   }
 

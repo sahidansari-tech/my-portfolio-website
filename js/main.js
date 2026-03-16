@@ -26,12 +26,24 @@
    DSA: Array<Object> → rendered via Map for O(1) icon-color lookup
 ══════════════════════════════════════════════════════════════════════ */
 const SKILLS = [
-  { name: 'Python',      sub: 'Data Science, AI/ML',      icon: 'python/python-original.svg',             glow: '37,118,171' },
-  { name: 'C',           sub: 'System Programming',       icon: 'c/c-original.svg',                       glow: '0,89,156'   },
-  { name: 'HTML5',       sub: 'Semantic Markup',          icon: 'html5/html5-original.svg',               glow: '227,76,38'  },
-  { name: 'CSS3',        sub: 'Responsive Design',        icon: 'css3/css3-original.svg',                 glow: '21,114,182' },
-  { name: 'JavaScript',  sub: 'ES6+, DOM Manipulation',   icon: 'javascript/javascript-original.svg',     glow: '247,223,30' },
-  { name: 'Git',         sub: 'Version Control',          icon: 'git/git-original.svg',                   glow: '240,80,50'  },
+  { name: 'Python',           sub: 'Data Science, AI/ML',    icon: 'python/python-original.svg',         glow: '37,118,171'  },
+  { name: 'C',                sub: 'System Programming',     icon: 'c/c-original.svg',                   glow: '0,89,156'    },
+  { name: 'HTML5',            sub: 'Semantic Markup',        icon: 'html5/html5-original.svg',           glow: '227,76,38'   },
+  { name: 'CSS3',             sub: 'Responsive Design',      icon: 'css3/css3-original.svg',             glow: '21,114,182'  },
+  { name: 'JavaScript',       sub: 'ES6+, DOM Manipulation', icon: 'javascript/javascript-original.svg', glow: '247,223,30'  },
+  { name: 'Git',              sub: 'Version Control',        icon: 'git/git-original.svg',               glow: '240,80,50'   },
+  { name: 'GitHub',           sub: 'Code Hosting',           icon: 'github/github-original.svg',         glow: '36,41,47'    },
+  { name: 'React',            sub: 'Frontend Framework',     icon: 'react/react-original.svg',           glow: '97,218,251'  },
+  { name: 'Next.js',          sub: 'React Framework',        icon: 'nextjs/nextjs-original.svg',         glow: '0,0,0'       },
+  { name: 'NumPy',            sub: 'Numerical Computing',    icon: 'numpy/numpy-original.svg',           glow: '77,171,207'  },
+  { name: 'Pandas',           sub: 'Data Analysis',          icon: 'pandas/pandas-original.svg',         glow: '130,0,128'   },
+  { name: 'Matplotlib',       sub: 'Data Visualization',     icon: 'matplotlib/matplotlib-original.svg', glow: '17,119,187'  },
+  { name: 'VS Code',          sub: 'Code Editor',            icon: 'vscode/vscode-original.svg',         glow: '0,122,204'   },
+  { name: 'Machine Learning', sub: 'Supervised & Unsupervised', icon: 'python/python-original.svg',      glow: '255,165,0'   },
+  { name: 'Deep Learning',    sub: 'Neural Networks',        icon: 'tensorflow/tensorflow-original.svg', glow: '255,111,0'   },
+  { name: 'NLP',              sub: 'Text & Language AI',     icon: 'python/python-original.svg',         glow: '99,102,241'  },
+  { name: 'Data Analytics',   sub: 'Insights & Reporting',   icon: 'pandas/pandas-original.svg',         glow: '0,168,107'   },
+  { name: 'Data Science',     sub: 'End-to-End Pipelines',   icon: 'numpy/numpy-original.svg',           glow: '77,119,207'  },
 ];
 
 const DEVICONS_BASE = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';

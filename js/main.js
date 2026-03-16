@@ -65,6 +65,7 @@ const SKILLS = [
   { name: 'Git',           sub: 'Version Control',           icon: 'git/git-original.svg',                 glow: '240,80,50'   },
   { name: 'GitHub',        sub: 'Code Hosting',              icon: 'github/github-original.svg',           glow: '36,41,47'    },
   { name: 'VS Code',       sub: 'Code Editor',               icon: 'vscode/vscode-original.svg',           glow: '0,122,204'   },
+  { name: 'Jupyter',       sub: 'Interactive Notebooks',     icon: 'jupyter/jupyter-original.svg',         glow: '255,112,20'  },
   { name: 'Docker',        sub: 'Containerization',          icon: 'docker/docker-original.svg',           glow: '0,175,230'   },
 ];
 

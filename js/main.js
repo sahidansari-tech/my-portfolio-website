@@ -593,32 +593,53 @@ class PortfolioManager {
 
   /* ──────────────────────── CONTACT FORM ─────────────────────────── */
   _setupForm() {
-    const form = document.getElementById('contact-form');
-    const btn  = document.getElementById('form-submit');
-    if (!form || !btn) return;
+  const form = document.getElementById('contact-form');
+  const btn  = document.getElementById('form-submit');
+  if (!form || !btn) return;
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
+  // ── EmailJS Credentials ──────────────────────────
+  const EMAILJS_PUBLIC_KEY  = 'ciep9-hJP6FK6Npk2';
+  const EMAILJS_SERVICE_ID  = 'service_f03rg12';
+  const EMAILJS_TEMPLATE_ID = 'template_d3j767';
+  // ─────────────────────────────────────────────────
 
-      const label = btn.querySelector('.btn__label');
-      const icon  = btn.querySelector('.btn__icon');
+  emailjs.init(EMAILJS_PUBLIC_KEY);
 
-      /* Loading state */
-      label.textContent = 'Sending…';
-      if (icon) { icon.className = 'fas fa-spinner fa-spin btn__icon'; }
-      btn.disabled = true;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
 
-      /* Simulate async send (replace with fetch/EmailJS in production) */
-      setTimeout(() => {
-        this.toast.push('Message sent successfully! 🚀', 'success');
+    const label = btn.querySelector('.btn__label');
+    const icon  = btn.querySelector('.btn__icon');
+
+    label.textContent = 'Sending…';
+    if (icon) icon.className = 'fas fa-spinner fa-spin btn__icon';
+    btn.disabled = true;
+
+    const templateParams = {
+      from_name:  form.querySelector('#f-name').value,
+      from_email: form.querySelector('#f-email').value,
+      subject:    form.querySelector('#f-subject').value,
+      message:    form.querySelector('#f-message').value,
+    };
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(() => {
+        this.toast.push('Message sent! I\'ll reply soon 🚀', 'success');
         form.reset();
         label.textContent = 'Send Message';
-        if (icon) { icon.className = 'fas fa-paper-plane btn__icon'; }
+        if (icon) icon.className = 'fas fa-paper-plane btn__icon';
         btn.disabled = false;
-      }, 1800);
-    });
-  }
+      })
+      .catch(err => {
+        console.error('EmailJS error:', err);
+        this.toast.push('Something went wrong. Email me directly! 📧', 'error');
+        label.textContent = 'Send Message';
+        if (icon) icon.className = 'fas fa-paper-plane btn__icon';
+        btn.disabled = false;
+      });
+  });
+}
 
   /* ──────────────────────── FOOTER YEAR ──────────────────────────── */
   _setupFooterYear() {

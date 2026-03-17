@@ -1242,28 +1242,59 @@ a.contact-value:hover { color: var(--clr-accent); }
   cursor: pointer;
   color: var(--clr-accent);
   font-weight: 600;
-  font-size: .85rem;
+  font-size: .82rem;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  background: rgba(99,102,241,.08);
-  border: 1px dashed var(--bdr-strong);
-  border-radius: var(--r-full);
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(99,102,241,.08), rgba(139,92,246,.08));
+  border: 1.5px solid var(--bdr-strong);
+  border-radius: var(--r-md);
   transition: all var(--t-base);
   user-select: none;
+  letter-spacing: .02em;
+  box-shadow: 0 2px 8px rgba(99,102,241,.10);
+  max-width: 100%;
 }
 .reveal-email__hidden:hover {
-  background: rgba(99,102,241,.15);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(99,102,241,.15), rgba(139,92,246,.12));
+  border-color: var(--clr-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99,102,241,.18);
+}
+.reveal-email__hidden:active {
+  transform: translateY(0px);
+}
+.reveal-email__hidden i {
+  font-size: .9rem;
+  opacity: .85;
 }
 .reveal-email__actual {
   color: var(--clr-accent);
   font-weight: 600;
   font-size: .85rem;
+  word-break: break-all;
   animation: fadeUp .3s ease forwards;
+  text-decoration: none;
+  border-bottom: 1.5px dashed rgba(99,102,241,.4);
+  padding-bottom: 1px;
+  transition: all var(--t-base);
+}
+.reveal-email__actual:hover {
+  border-bottom-style: solid;
+  color: var(--clr-accent-deep);
 }
 
+@media (max-width: 480px) {
+  .reveal-email__hidden {
+    font-size: .78rem;
+    padding: 7px 13px;
+    gap: 6px;
+  }
+  .reveal-email__actual {
+    font-size: .8rem;
+  }
+}
 /* Contact form */
 .contact-form-wrap {
   background: var(--bg-card);

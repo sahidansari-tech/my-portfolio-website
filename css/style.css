@@ -1205,7 +1205,7 @@ a.contact-value:hover { color: var(--clr-accent); }
   background: var(--bg-muted);
   border: 1px solid var(--bdr-default);
   border-radius: var(--r-lg);
-  color: var(--txt-primary);
+  color: #ffffff;
   transition: all var(--t-base);
   position: relative; overflow: hidden;
   text-decoration: none;

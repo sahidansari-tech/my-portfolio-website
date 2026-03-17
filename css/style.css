@@ -1237,6 +1237,33 @@ a.contact-value:hover { color: var(--clr-accent); }
 .social-card__handle { font-size: .76rem; color: var(--txt-muted); transition: color var(--t-base); }
 .social-card__arrow  { font-size: .82rem; color: var(--txt-muted); transition: all var(--t-base); position: relative; z-index: 1; }
 
+/* ── Click to Reveal Email ── */
+.reveal-email__hidden {
+  cursor: pointer;
+  color: var(--clr-accent);
+  font-weight: 600;
+  font-size: .85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(99,102,241,.08);
+  border: 1px dashed var(--bdr-strong);
+  border-radius: var(--r-full);
+  transition: all var(--t-base);
+  user-select: none;
+}
+.reveal-email__hidden:hover {
+  background: rgba(99,102,241,.15);
+  transform: translateY(-1px);
+}
+.reveal-email__actual {
+  color: var(--clr-accent);
+  font-weight: 600;
+  font-size: .85rem;
+  animation: fadeUp .3s ease forwards;
+}
+
 /* Contact form */
 .contact-form-wrap {
   background: var(--bg-card);

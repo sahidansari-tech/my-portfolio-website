@@ -600,7 +600,7 @@ class PortfolioManager {
   // ── EmailJS Credentials ──────────────────────────
   const EMAILJS_PUBLIC_KEY  = 'ciep9-hJP6FK6Npk2';
   const EMAILJS_SERVICE_ID  = 'service_f03rg12';
-  const EMAILJS_TEMPLATE_ID = 'template_d3j767';
+  const EMAILJS_TEMPLATE_ID = 'template_d3jj767';
   // ─────────────────────────────────────────────────
 
   emailjs.init(EMAILJS_PUBLIC_KEY);

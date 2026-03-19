@@ -1454,3 +1454,226 @@ a.contact-value:hover { color: var(--clr-accent); }
   .hero-actions { flex-direction: column; align-items: center; }
   .btn--full  { width: 100%; }
 }
+
+/* ══════════════════════════════════════════════
+   DARK MODE
+══════════════════════════════════════════════ */
+
+/* ── Dark theme variables ── */
+[data-theme="dark"] {
+  --bg-page:    #0f172a;
+  --bg-card:    #1e293b;
+  --bg-muted:   #1e293b;
+  --bg-subtle:  rgba(99,102,241,.12);
+  --bg-input:   #1e293b;
+
+  --txt-primary:   #f1f5f9;
+  --txt-secondary: #94a3b8;
+  --txt-muted:     #64748b;
+
+  --bdr-subtle:  rgba(99,102,241,.18);
+  --bdr-default: rgba(148,163,184,.15);
+  --bdr-strong:  rgba(99,102,241,.40);
+
+  --sh-sm:  0 2px 8px  rgba(0,0,0,.3);
+  --sh-md:  0 4px 16px rgba(0,0,0,.35);
+  --sh-lg:  0 10px 30px rgba(0,0,0,.4);
+  --sh-xl:  0 20px 60px rgba(0,0,0,.45);
+}
+
+/* ── Dark body background ── */
+[data-theme="dark"] body {
+  background: linear-gradient(145deg, #0f172a 0%, #1a1040 50%, #0f172a 100%);
+}
+
+[data-theme="dark"] body::before {
+  background-image: radial-gradient(circle, rgba(99,102,241,.08) 1px, transparent 1px);
+}
+
+/* ── Dark navbar ── */
+[data-theme="dark"] .site-header {
+  background: rgba(15,23,42,.92);
+  border-bottom-color: rgba(99,102,241,.2);
+  box-shadow: 0 4px 24px rgba(0,0,0,.3);
+}
+
+[data-theme="dark"] .nav-list {
+  background: rgba(99,102,241,.08);
+  border-color: rgba(99,102,241,.2);
+}
+
+[data-theme="dark"] .nav-toggle {
+  background: #1e293b;
+  border-color: rgba(99,102,241,.25);
+  color: #f1f5f9;
+}
+
+/* ── Dark hero ── */
+[data-theme="dark"] .hero-orb--primary {
+  background: radial-gradient(circle, rgba(99,102,241,.22), rgba(139,92,246,.12), transparent 65%);
+}
+[data-theme="dark"] .hero-orb--secondary {
+  background: radial-gradient(circle, rgba(139,92,246,.15), transparent 65%);
+}
+
+[data-theme="dark"] .float-badge {
+  background: rgba(30,41,59,.92);
+  border-color: rgba(99,102,241,.25);
+  box-shadow: 0 4px 16px rgba(0,0,0,.4);
+}
+
+/* ── Dark profile ring ── */
+[data-theme="dark"] .profile-ring__track::before {
+  background: #0f172a;
+}
+[data-theme="dark"] .profile-img-wrap {
+  background: #1e293b;
+}
+
+/* ── Dark cards ── */
+[data-theme="dark"] .info-item,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .cert-card,
+[data-theme="dark"] .skill-item,
+[data-theme="dark"] .contact-info-card,
+[data-theme="dark"] .contact-form-wrap,
+[data-theme="dark"] .profile-card {
+  background: #1e293b;
+  border-color: rgba(99,102,241,.18);
+}
+
+[data-theme="dark"] .project-card.featured {
+  background: linear-gradient(135deg, #1e293b, rgba(99,102,241,.08));
+}
+
+[data-theme="dark"] .cert--earned {
+  background: linear-gradient(135deg, #1e293b, rgba(16,185,129,.06));
+}
+
+/* ── Dark inputs ── */
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+  background: #0f172a;
+  border-color: rgba(99,102,241,.25);
+  color: #f1f5f9;
+}
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #64748b;
+}
+[data-theme="dark"] .contact-form input:focus,
+[data-theme="dark"] .contact-form textarea:focus {
+  background: #1e293b;
+  border-color: var(--clr-accent);
+}
+
+/* ── Dark social cards ── */
+[data-theme="dark"] .social-card {
+  background: #0f172a;
+  border-color: rgba(99,102,241,.2);
+}
+
+/* ── Dark contact items ── */
+[data-theme="dark"] .contact-item {
+  background: #0f172a;
+  border-color: rgba(99,102,241,.15);
+}
+
+/* ── Dark footer ── */
+[data-theme="dark"] .site-footer {
+  background: rgba(0,0,0,.3);
+  border-top-color: rgba(99,102,241,.15);
+}
+
+/* ── Dark section badge ── */
+[data-theme="dark"] .section-badge {
+  background: rgba(99,102,241,.15);
+}
+
+/* ── Dark hero badge ── */
+[data-theme="dark"] .hero-badge {
+  background: rgba(99,102,241,.15);
+}
+
+/* ── Dark tab bar ── */
+[data-theme="dark"] .tab-bar {
+  background: #1e293b;
+  border-color: rgba(99,102,241,.2);
+}
+
+/* ── Dark skill items alternate row ── */
+[data-theme="dark"] .profile-card__body {
+  background: #1e293b;
+}
+
+/* ── Dark reveal email ── */
+[data-theme="dark"] .reveal-email__hidden {
+  background: rgba(99,102,241,.12);
+  border-color: rgba(99,102,241,.3);
+}
+
+/* ── Dark modal ── */
+[data-theme="dark"] .modal__box {
+  background: #1e293b;
+  border-color: rgba(99,102,241,.2);
+}
+[data-theme="dark"] .modal__header {
+  background: rgba(99,102,241,.08);
+  border-bottom-color: rgba(99,102,241,.15);
+}
+[data-theme="dark"] .modal__img-wrap {
+  background: #0f172a;
+  border-color: rgba(99,102,241,.15);
+}
+[data-theme="dark"] .modal__actions {
+  border-top-color: rgba(99,102,241,.15);
+}
+[data-theme="dark"] .modal__close {
+  background: #0f172a;
+  border-color: rgba(99,102,241,.2);
+  color: #94a3b8;
+}
+[data-theme="dark"] .zoom-btn {
+  background: rgba(30,41,59,.9);
+  border-color: rgba(99,102,241,.2);
+  color: #f1f5f9;
+}
+
+/* ── Theme Toggle Button ── */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--bdr-subtle);
+  border-radius: var(--r-md);
+  background: var(--bg-card);
+  color: var(--txt-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: all var(--t-base);
+  box-shadow: var(--sh-xs);
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  background: var(--bg-subtle);
+  color: var(--clr-accent);
+  border-color: var(--bdr-strong);
+  transform: rotate(15deg);
+}
+
+/* Dark mode toggle icon swap */
+[data-theme="dark"] .theme-toggle {
+  background: #1e293b;
+  border-color: rgba(99,102,241,.3);
+  color: #f1f5f9;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  color: var(--clr-accent);
+}
+
+/* Smooth theme transition on everything */
+*, *::before, *::after {
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease;
+}

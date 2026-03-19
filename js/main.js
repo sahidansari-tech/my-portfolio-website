@@ -263,6 +263,9 @@ class PortfolioManager {
 
   /* ──────────────────────── INIT ──────────────────────────────────── */
   _init() {
+     /* Page loader hide karo jab sab load ho jaye */
+    this._hideLoader();   // ← Sabse pehle yeh
+     
     /* Add .js-ready FIRST — switches reveal-items from always-visible to animated */
     document.body.classList.add('js-ready');
 
@@ -683,6 +686,19 @@ if (hiddenEl && actualEl) {
 
   /* ──────────────────────── PUBLIC API ────────────────────────────── */
   showNotification(msg, type = 'info') { this.toast.push(msg, type); }
+   
+   /* ──────────────────────── PAGE LOADER ──────────────────────── */
+  _hideLoader() {
+    const loader = document.getElementById('page-loader');
+    if (!loader) return;
+
+    // 1.8s baad hide karo — bar animation complete hone ke baad
+    setTimeout(() => {
+      loader.classList.add('hidden');
+
+      // DOM se remove karo animation complete hone ke baad
+      setTimeout(() => loader.remove(), 500);
+    }, 1800);
 
   /* ──────────────────────── DARK MODE ─────────────────────────── */
   _setupTheme() {

@@ -1677,7 +1677,6 @@ a.contact-value:hover { color: var(--clr-accent); }
 *, *::before, *::after {
   transition: background-color .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease;
 }
-
 /* ══════════════════════════════════════════════
    PAGE LOADER
 ══════════════════════════════════════════════ */
@@ -1689,6 +1688,8 @@ a.contact-value:hover { color: var(--clr-accent); }
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  visibility: visible;
   transition: opacity .5s ease, visibility .5s ease;
 }
 
@@ -1701,6 +1702,16 @@ a.contact-value:hover { color: var(--clr-accent); }
   visibility: hidden;
 }
 
+/* Safety net — 3s ke baad force hide */
+.page-loader {
+  animation: loaderTimeout 3s ease forwards;
+}
+
+@keyframes loaderTimeout {
+  0%, 80% { opacity: 1; visibility: visible; }
+  100%    { opacity: 0; visibility: hidden;  }
+}
+
 .loader-content {
   display: flex;
   flex-direction: column;
@@ -1708,7 +1719,7 @@ a.contact-value:hover { color: var(--clr-accent); }
   gap: 20px;
 }
 
-/* SA logo circle */
+/* SA logo */
 .loader-logo {
   width: 72px;
   height: 72px;
@@ -1745,13 +1756,13 @@ a.contact-value:hover { color: var(--clr-accent); }
   width: 0%;
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
   border-radius: 9999px;
-  animation: loaderFill 1.8s cubic-bezier(.4,0,.2,1) forwards;
+  animation: loaderFill 2.5s cubic-bezier(.4,0,.2,1) forwards;
 }
 
 @keyframes loaderFill {
   0%   { width: 0%; }
   60%  { width: 75%; }
-  90%  { width: 90%; }
+  90%  { width: 95%; }
   100% { width: 100%; }
 }
 
